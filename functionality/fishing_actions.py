@@ -4,23 +4,34 @@ from wrappers.win32api_wrapper import *
 from wrappers.logging_wrapper import debug
 
 def anti_afk_movement():
-    # cancel current cast
-    press_mouse_key()
+    release_key('b')
     sleep(0.1)
+
+    debug("Pressing mouse to cancel any cast")
+    press_mouse_key()
     release_mouse_key()
+    debug("Waiting 2s")
     sleep(2)
 
+    arm_disarm_fishing_rod(arm_disarm_timeout)
+
     # walk left
+    debug("Walking left...")
     press_key('a')
-    sleep(0.3)
+    sleep(0.5)
     release_key('a')
+
 
     sleep(0.5)
 
     # walk right
+    debug("Walking right...")
     press_key('d')
     sleep(0.3)
     release_key('d')
+
+    arm_disarm_fishing_rod(arm_disarm_timeout)
+    debug("Done anti-AFK")
     sleep(0.5)
 
 def fish_notice():

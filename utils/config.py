@@ -96,6 +96,10 @@ dict = {
 
 def save_data():
     d = {
+    'anti_afk':{
+      'every': dict['anti_afk']['every'].get(),
+      'enable': dict['anti_afk']['enable'].get()
+    },
     'fishing':{
       'x': dict['fishing']['x'].get(),
       'y': dict['fishing']['y'].get(),

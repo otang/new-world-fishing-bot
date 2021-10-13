@@ -1,5 +1,5 @@
 anti_afk:
-  every: 5
+  every: 30
   enable: 1
 fishing:
   x: 800
@@ -71,4 +71,4 @@ colors:
 resolution:
   x: 5120
   y: 2160
-log_lvl: DEBUG
+log_lvl: INFO

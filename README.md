@@ -37,6 +37,7 @@ click img for demonstration
 * Now all you have to do is click the ‘Start fishing’ button and move the mouse cursor into the game window.
 
 # Personalization guide
+* Anti AFK will move your character left and right every interval to prevent AFK detection.
 * Repairing functionality will work every interval you set on the panel and is activated while searching for a fish\
   Each interval, starting with casting the fishing rod, retrieving the fish, opening the inventory for repairs, is possible to change\
   Close app, go to your installation folder, open resources and open config.xml with any text editor you have\

@@ -7,6 +7,10 @@ import random
 config = safe_load(open(CONFIG_PATH))
 
 dict = {
+    'anti_afk':{
+      'every': IntVar(value=config['anti_afk']['every']),
+      'enable': IntVar(value=config['anti_afk']['enable'])
+    },
     'fishing':{
       'x': IntVar(value=config['fishing']['x']),
       'y': IntVar(value=config['fishing']['y']),

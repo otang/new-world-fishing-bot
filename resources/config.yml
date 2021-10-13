@@ -1,3 +1,6 @@
+anti_afk:
+  every: 600
+  enable: 1
 fishing:
   x: 1420
   y: 32

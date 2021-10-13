@@ -3,6 +3,26 @@ from time import sleep
 from wrappers.win32api_wrapper import *
 from wrappers.logging_wrapper import debug
 
+def anti_afk_movement():
+    # cancel current cast
+    press_mouse_key()
+    sleep(0.1)
+    release_mouse_key()
+    sleep(2)
+
+    # walk left
+    press_key('a')
+    sleep(0.3)
+    release_key('a')
+
+    sleep(0.5)
+
+    # walk right
+    press_key('d')
+    sleep(0.3)
+    release_key('d')
+    sleep(0.5)
+
 def fish_notice():
     notice_timeout = random_timeout(dict['fishing']['timeouts']['notice'])
     debug("Press mouse key for: {} s".format(notice_timeout))

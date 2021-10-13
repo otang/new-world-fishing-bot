@@ -13,6 +13,10 @@ VK_CODE = {'tab':0x09,
            'b':0x42,
            'e':0x45,
            'r':0x52,
+           'a':0x41,
+           'd':0x44,
+           'w':0x57,
+           's':0x53,
            'F3':0x72}
 
 def press_key(key):

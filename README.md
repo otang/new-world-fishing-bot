@@ -68,5 +68,5 @@ click img for demonstration
 ![alt text](https://i.imgur.com/Pgv97yv.png)
 # If you would like to create your own .exe file:
 1. Install: ```pip install pyinstaller```
-2. Run following command: ```pyinstaller --add-binary resources:resources bot.py```
+2. Run following command (windows only): ```pyinstaller --add-data "resources;resources" -y bot.py```
 3. Your exe file should generate in ```dist\bot\bot.exe ```

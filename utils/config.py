@@ -7,6 +7,10 @@ import random
 config = safe_load(open(CONFIG_PATH))
 
 dict = {
+    'anti_afk':{
+      'every': IntVar(value=config['anti_afk']['every']),
+      'enable': IntVar(value=config['anti_afk']['enable'])
+    },
     'fishing':{
       'x': IntVar(value=config['fishing']['x']),
       'y': IntVar(value=config['fishing']['y']),
@@ -92,6 +96,10 @@ dict = {
 
 def save_data():
     d = {
+    'anti_afk':{
+      'every': dict['anti_afk']['every'].get(),
+      'enable': dict['anti_afk']['enable'].get()
+    },
     'fishing':{
       'x': dict['fishing']['x'].get(),
       'y': dict['fishing']['y'].get(),

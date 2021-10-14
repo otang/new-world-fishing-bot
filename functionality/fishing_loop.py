@@ -11,7 +11,16 @@ def fishing_loop():
         return
     debug('starting new loop')
     gv.last_results.add(call_appropriate_fishing_action())
+
     if(gv.last_results.is_full_of('0')):
+        if(dict['anti_afk']['enable'].get() == 1):
+            should_move_in = -1 * (int(time()) - gv.last_anti_afk_time - dict['anti_afk']['every'].get())
+            debug("Anti AFK movement in: " + str(should_move_in))
+            if(should_move_in < 0):
+                gv.last_anti_afk_time = int(time())
+                info("Moving to avoid AFK detection")
+                anti_afk_movement()
+
         if(dict['repairing']['enable'].get() == 1):
             should_repair_in = -1 * (int(time()) - gv.last_repair_time - dict['repairing']['every'].get())
             debug("Repair in: " + str(should_repair_in))
@@ -22,6 +31,7 @@ def fishing_loop():
                 if dict['bait']['enable'].get():
                     info("Selecting bait")
                     select_bait()
+
     if (gv.continue_fishing):
         gv.root.after(int(random_timeout(dict['fishing']['timeouts']['loop'])*1000), fishing_loop)
 

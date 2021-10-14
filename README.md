@@ -61,12 +61,12 @@ click img for demonstration
 # Code installation guide
 * Clone repo ```git clone https://github.com/Siterizer/new-world-fishing-bot.git```
 * Install python https://www.python.org/downloads/
-* Create python virtual environment ```python3 -m venv instalation_directory\new-world-fishing-bot```
+* Create python virtual environment ```python3 -m venv installation_directory\new-world-fishing-bot```
 * Enter virtual environment ```Scripts\activate```
 * Install modules: ```pip install -r requirements.txt```
 * run ```python bot.py``` following user interface should appear:\
 ![alt text](https://i.imgur.com/Pgv97yv.png)
 # If you would like to create your own .exe file:
 1. Install: ```pip install pyinstaller```
-2. Run following command: ```pyinstaller --add-data resources;resources bot.py```
+2. Run following command: ```pyinstaller --add-binary resources:resources bot.py```
 3. Your exe file should generate in ```dist\bot\bot.exe ```

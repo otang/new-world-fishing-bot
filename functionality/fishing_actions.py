@@ -3,6 +3,43 @@ from time import sleep
 from wrappers.win32api_wrapper import *
 from wrappers.logging_wrapper import debug
 
+def walk_left(direction):
+    debug("Walking left...")
+    press_key('a')
+    release_key('a')
+    sleep(0.1)
+    press_key('a')
+    release_key('a')
+    sleep(0.1)
+    press_key('a')
+    release_key('a')
+    sleep(0.1)
+    press_key('a')
+    release_key('a')
+    sleep(0.1)
+    press_key('a')
+    release_key('a')
+    sleep(0.1)
+
+def walk_right(direction):
+    debug("Walking right...")
+    press_key('d')
+    release_key('d')
+    sleep(0.1)
+    press_key('d')
+    release_key('d')
+    sleep(0.1)
+    press_key('d')
+    release_key('d')
+    sleep(0.1)
+    press_key('d')
+    release_key('d')
+    sleep(0.1)
+    press_key('d')
+    release_key('d')
+    sleep(0.1)    
+
+
 def anti_afk_movement():
     debug("Pressing mouse to cancel any cast")
     press_mouse_key()
@@ -10,22 +47,12 @@ def anti_afk_movement():
     debug("Waiting 3s")
     sleep(3)
 
-    # walk left
-    debug("Walking left...")
-    press_key('a')
+    walk_left()
     sleep(0.5)
-    release_key('a')
-
-    sleep(0.5)
-
-    # walk right
-    debug("Walking right...")
-    press_key('d')
-    sleep(0.5)
-    release_key('d')
+    walk_right()
 
     debug("Done anti-AFK")
-    sleep(0.1)
+    sleep(0.5)
 
 def fish_notice():
     notice_timeout = random_timeout(dict['fishing']['timeouts']['notice'])

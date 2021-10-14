@@ -3,7 +3,13 @@ from time import sleep
 from wrappers.win32api_wrapper import *
 from wrappers.logging_wrapper import debug
 
-def walk_left(direction):
+def anti_afk_movement():
+    debug("Pressing mouse to cancel any cast")
+    press_mouse_key()
+    release_mouse_key()
+    debug("Waiting 3s")
+    sleep(3)
+
     debug("Walking left...")
     press_key('a')
     release_key('a')
@@ -21,7 +27,8 @@ def walk_left(direction):
     release_key('a')
     sleep(0.1)
 
-def walk_right(direction):
+    sleep(0.5)
+
     debug("Walking right...")
     press_key('d')
     release_key('d')
@@ -37,19 +44,7 @@ def walk_right(direction):
     sleep(0.1)
     press_key('d')
     release_key('d')
-    sleep(0.1)    
-
-
-def anti_afk_movement():
-    debug("Pressing mouse to cancel any cast")
-    press_mouse_key()
-    release_mouse_key()
-    debug("Waiting 3s")
-    sleep(3)
-
-    walk_left()
-    sleep(0.5)
-    walk_right()
+    sleep(0.1)  
 
     debug("Done anti-AFK")
     sleep(0.5)

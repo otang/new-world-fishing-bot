@@ -1,5 +1,5 @@
 anti_afk:
-  every: 30
+  every: 1
   enable: 1
 fishing:
   x: 800

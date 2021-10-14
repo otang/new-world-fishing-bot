@@ -53,7 +53,6 @@ def anti_afk_movement():
     walk_right()
 
     debug("Done anti-AFK")
-    sleep(0.5)
 
 def fish_notice():
     notice_timeout = random_timeout(dict['fishing']['timeouts']['notice'])

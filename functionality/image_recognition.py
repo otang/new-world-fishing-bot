@@ -9,7 +9,7 @@ NOTICE = cv.imread(FISH_NOTICED)
 REEL_COLOR = dict['colors']['green']
 WAIT_COLOR_BROWN = dict['colors']['brown']
 WAIT_COLOR_RED = dict['colors']['red']
-COLOR_WAGES = 7
+COLOR_WAGES = 4
 
 def image_recognition_result(x, y, width, height):
     region=(x, y, x + width, y + height)

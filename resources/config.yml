@@ -26,7 +26,7 @@ repairing:
   x: 860
   y: 665
   length: 25
-  every: 700
+  every: 720
   enable: 1
   timeouts:
     arm_disarm:
@@ -47,7 +47,7 @@ bait:
   equip_button_x: 1480
   equip_button_y: 815
   length: 25
-  enable: 0
+  enable: 1
   timeouts:
     select:
       min: 0.1
